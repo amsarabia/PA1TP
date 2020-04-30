@@ -3,7 +3,6 @@ package ejercicio_03;
 import java.util.Scanner;
 
 public class Ejercicio_03 {
-    static String Fibonacci = "";
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,16 +10,15 @@ public class Ejercicio_03 {
         int inputInt = scanner.nextInt();
         scanner.close();
 
-        getFibonacci(inputInt);
-        System.out.println(Fibonacci);
+        for (int i = 0; i < inputInt; i ++) {
+            System.out.println(getFibonacci(i));
+        }
     }
     
     static int getFibonacci(int n) {
 
         if (n > 1) {
-            Fibonacci += String.valueOf(n - 2) + ", " + String.valueOf(n - 1) + "; ";
-            // System.out.println(String.valueOf(n - 2) + ", " + String.valueOf(n - 1));
-            return getFibonacci(n - 2) + getFibonacci(n - 1);  
+            return getFibonacci(n - 1) + getFibonacci(n - 2);  
         
         } else if (n == 1) {  
             return 1;
