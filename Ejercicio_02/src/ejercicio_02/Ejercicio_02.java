@@ -1,7 +1,10 @@
+package ejercicio_02;
+
 import java.util.Scanner;
 
 public class Ejercicio_02 {
-    public static void main(String args[]) {
+
+    public static void main(String[] args) {
         System.out.print("Ingrese un nombre: ");
         Scanner scanner = new Scanner(System.in);
         String inputString = scanner.nextLine();
@@ -14,5 +17,5 @@ public class Ejercicio_02 {
         }
         
         scanner.close();
-    }
+    }    
 }

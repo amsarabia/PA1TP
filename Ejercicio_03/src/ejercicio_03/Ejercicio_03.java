@@ -1,9 +1,11 @@
+package ejercicio_03;
+
 import java.util.Scanner;
 
 public class Ejercicio_03 {
     static String Fibonacci = "";
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         int inputInt = scanner.nextInt();
@@ -12,9 +14,9 @@ public class Ejercicio_03 {
         getFibonacci(inputInt);
         System.out.println(Fibonacci);
     }
+    
+    static int getFibonacci(int n) {
 
-    static int getFibonacci(int n)
-    {
         if (n > 1) {
             Fibonacci += String.valueOf(n - 2) + ", " + String.valueOf(n - 1) + "; ";
             // System.out.println(String.valueOf(n - 2) + ", " + String.valueOf(n - 1));
@@ -30,5 +32,5 @@ public class Ejercicio_03 {
             System.out.println("Debes ingresar un tamaño mayor o igual a 1");
             return -1; 
         }
-    }    
+    }        
 }
